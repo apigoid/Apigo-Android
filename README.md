@@ -29,7 +29,10 @@ implementation 'com.squareup.okhttp3:okhttp:3.9.1'
 3. Add this line below to your `Application` class within `onCreate` method to initialize Apigo SDK
 
 ```java 
-Apigo.initialize(this, "YOUR-APPLICATION-ID-HERE", "YOUR-CLIENT-KEY-HERE");
+Apigo.initialize(this,
+                "YOUR_SERVER_URL",
+                "YOUR_APPLICATION_ID",
+                "YOUR_CLIENT_KEY");
 ```
 Don't forget to initialize your application class to `AndroidManifest.xml`  
 
