@@ -19,6 +19,10 @@ import id.apigo.MessageSender;
 import id.apigo.MessageTemplate;
 import id.apigo.MessageType;
 
+/**
+ * Created by Apigo on 02/10/17.
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     @Override

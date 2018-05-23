@@ -6,7 +6,7 @@ import id.apigo.Apigo;
 import id.apigo.LogLevel;
 
 /**
- * Created by Eyro on 02/10/17.
+ * Created by Apigo on 02/10/17.
  */
 
 public class ApigoApp extends Application {
@@ -16,8 +16,8 @@ public class ApigoApp extends Application {
 
         Apigo.setLogLevel(LogLevel.VERBOSE);
         Apigo.initialize(this,
-                "http://116.206.196.88:8104/2/",
-                "Xv7KWM",
-                "M1sza0PMKro5sGs0fyLvoW9M0fjrwUpG");
+                "YOUR_SERVER_URL",
+                "YOUR_APPLICATION_ID",
+                "YOUR_CLIENT_KEY");
     }
 }

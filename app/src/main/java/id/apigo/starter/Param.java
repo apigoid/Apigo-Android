@@ -6,7 +6,7 @@ import android.os.Parcelable;
 import com.mesosfer.MesosferObject;
 
 /**
- * Created by Eyro on 02/10/17.
+ * Created by Apigo on 02/10/17.
  */
 
 public class Param<T extends MesosferObject> implements Parcelable {

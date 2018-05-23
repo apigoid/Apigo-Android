@@ -16,7 +16,7 @@ import java.util.List;
 import id.apigo.ApigoObject;
 
 /**
- * Created by Eyro on 02/10/17.
+ * Created by Apigo on 02/10/17.
  */
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {

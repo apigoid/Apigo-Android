@@ -17,6 +17,10 @@ import java.util.List;
 
 import id.apigo.ApigoObject;
 
+/**
+ * Created by Apigo on 02/10/17.
+ */
+
 public class ListActivity extends AppCompatActivity {
 
     private ProgressBar progressBar;
