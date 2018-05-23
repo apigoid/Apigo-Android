@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Apigo Starter</string>
+    <string name="label_sender">Message Sender</string>
+    <string name="label_recipient">Message Recipient</string>
+    <string name="label_template">Message Template</string>
+    <string name="label_log">Message Log</string>
+    <string name="label_send_message_direct">Send Message Direct</string>
+    <string name="label_send_message_broadcast">Send Message Broadcast</string>
+</resources>
