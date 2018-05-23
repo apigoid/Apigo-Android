@@ -24,7 +24,7 @@ implementation 'com.squareup.okhttp3:okhttp:3.9.1'
 ```
 
 ## Setup
-1. Register first to [Apigo Cloud][cloud]
+1. Register first to [Apigo Customer Portal][cloud]
 2. Create an application to get `applicationId` and `clientKey`
 3. Add this line below to your `Application` class within `onCreate` method to initialize Apigo SDK
 
@@ -49,5 +49,5 @@ Everything is done!
 
 [apigo.id]:https://apigo.id
 [docs]:https://apigo.id/docs/
-[cloud]:https://dashboard.apigo.id/
+[cloud]:https://customer.apigo.id/
 [library]:https://github.com/apigoid/Apigo-Android/releases/latest
