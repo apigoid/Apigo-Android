@@ -6,4 +6,6 @@
     <string name="label_log">Message Log</string>
     <string name="label_send_message_direct">Send Message Direct</string>
     <string name="label_send_message_broadcast">Send Message Broadcast</string>
+    <string name="label_send_message_direct_template">Send Message Direct Template</string>
+    <string name="label_send_message_broadcast_template">Send Message Broadcast Template</string>
 </resources>

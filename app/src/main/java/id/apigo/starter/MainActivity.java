@@ -7,10 +7,20 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.mesosfer.DeleteCallback;
+import com.mesosfer.FindCallback;
+import com.mesosfer.GetCallback;
+import com.mesosfer.LogOutCallback;
 import com.mesosfer.MesosferException;
+import com.mesosfer.MesosferObject;
+import com.mesosfer.MesosferQuery;
+import com.mesosfer.MesosferUser;
+import com.mesosfer.SaveCallback;
 import com.mesosfer.SendMessageCallback;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import id.apigo.Message;
 import id.apigo.MessageLog;
@@ -36,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.buttonLog).setOnClickListener(onClickListener);
         findViewById(R.id.buttonSendMessageDirect).setOnClickListener(onClickListener);
         findViewById(R.id.buttonSendMessageBroadcast).setOnClickListener(onClickListener);
+
+
     }
 
     private View.OnClickListener onClickListener = new View.OnClickListener() {
@@ -66,8 +78,8 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.buttonSendMessageDirect:
                     message = new Message.BuilderDirect()
-                            .setSender(MessageSender.createWithoutData(MessageSender.class, "2JK2569eVw"))
-                            .setRecipient(MessageRecipient.createWithoutData(MessageRecipient.class, "0rdOK8Poke"))
+                            .setSender(MessageSender.createWithoutData(MessageSender.class, "SENDER_ID"))
+                            .setRecipient(MessageRecipient.createWithoutData(MessageRecipient.class, "RECIPIENT_ID"))
                             .setContent("Test send sms from Android")
                             .setSandbox(true)
                             .setMessageType(MessageType.SMS)
@@ -75,9 +87,27 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.buttonSendMessageBroadcast:
                     message = new Message.BuilderBroadcast()
-                            .setSender(MessageSender.createWithoutData(MessageSender.class, "2JK2569eVw"))
+                            .setSender(MessageSender.createWithoutData(MessageSender.class, "SENDER_ID"))
                             .setGroup("EyroDev")
                             .setContent("Test broadcast sms from Android")
+                            .setSandbox(true)
+                            .setMessageType(MessageType.SMS)
+                            .build();
+                    break;
+                case R.id.buttonSendMessageDirectTemplate:
+                    message = new Message.BuilderDirectTemplate()
+                            .setSender(MessageSender.createWithoutData(MessageSender.class, "SENDER_ID"))
+                            .setRecipient(MessageRecipient.createWithoutData(MessageRecipient.class, "RECIPIENT_ID"))
+                            .setTemplate(MessageTemplate.createWithoutData(MessageTemplate.class, "TEMPLATE_ID"))
+                            .setSandbox(true)
+                            .setMessageType(MessageType.SMS)
+                            .build();
+                    break;
+                case R.id.buttonSendMessageBroadcastTemplate:
+                    message = new Message.BuilderBroadcastTemplate()
+                            .setSender(MessageSender.createWithoutData(MessageSender.class, "SENDER_ID"))
+                            .setTemplate(MessageTemplate.createWithoutData(MessageTemplate.class, "TEMPLATE_ID"))
+                            .setGroup("EyroDev")
                             .setSandbox(true)
                             .setMessageType(MessageType.SMS)
                             .build();
